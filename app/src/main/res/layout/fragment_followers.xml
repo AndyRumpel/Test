@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/followers_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+            android:id="@+id/followers_no_items"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/error_no_items"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+    <com.github.rahatarmanahmed.cpv.CircularProgressView
+            android:id="@+id/cpv_followers"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            app:cpv_indeterminate="true"
+            app:cpv_animAutostart="true"
+            app:cpv_color="@color/colorPrimary"
+            android:visibility="gone"/>
+
+</FrameLayout>

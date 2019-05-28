@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/news_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <com.github.rahatarmanahmed.cpv.CircularProgressView
+            android:id="@+id/cpv_news"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:cpv_indeterminate="true"
+            app:cpv_animAutostart="true"
+            app:cpv_color="@color/colorPrimary"/>
+
+    <TextView
+            android:id="@+id/news_no_items"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/error_no_items"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+</FrameLayout>

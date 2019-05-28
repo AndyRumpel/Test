@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:iconTint="@android:color/white"
+        >
+    <item
+        android:id="@+id/menu_container"
+        android:title="@string/menu_container"
+        app:showAsAction="always"
+        >
+
+        <item
+                android:id="@+id/search"
+                android:title="@string/search"
+                android:icon="@drawable/ic_search_white"
+                app:showAsAction="never"/>
+        <item
+                android:id="@+id/settings"
+                android:title="@string/settings"
+                android:icon="@drawable/ic_settings_white_24dp"
+                app:showAsAction="never"/>
+        <item
+                android:id="@+id/about"
+                android:title="@string/about"
+                android:icon="@drawable/ic_about_white_24dp"
+                app:showAsAction="never"/>
+        <item
+                android:id="@+id/quit"
+                android:title="@string/quit"
+                android:icon="@drawable/ic_quit_white_24dp"
+                app:showAsAction="never"/>
+    </item>
+
+    <item
+            android:id="@+id/menu_share"
+            android:icon="@drawable/share"
+            app:showAsAction="ifRoom"
+            android:title="@string/app_name" />
+</menu>
