@@ -39,7 +39,7 @@ class ImageBehavior(val context: Context, attr: AttributeSet?): CoordinatorLayou
     }
 
     override fun onDependentViewChanged(parent: CoordinatorLayout, child: SimpleDraweeView, dependency: View): Boolean {
-        maybeInitProperties(child, dependency)
+        initProperties(child, dependency)
 
         val maxScrollDistance = (mStartToolbarPosition - getStatusBarHeight())
         val expandedPercentageFactor = dependency.y / maxScrollDistance
@@ -59,7 +59,7 @@ class ImageBehavior(val context: Context, attr: AttributeSet?): CoordinatorLayou
     }
 
     @SuppressLint("PrivateResource")
-    private fun maybeInitProperties(child: SimpleDraweeView, dependency: View) {
+    private fun initProperties(child: SimpleDraweeView, dependency: View) {
         if (mStartYPosition == 0) mStartYPosition = dependency.y.toInt()
         if (mFinalYPosition == 0) mFinalYPosition = dependency.height / 2
         if (mStartHeight == 0) mStartHeight = child.height
@@ -71,7 +71,7 @@ class ImageBehavior(val context: Context, attr: AttributeSet?): CoordinatorLayou
 
     private fun getStatusBarHeight(): Int {
         var result = 0
-        var resourceID = context.resources.getIdentifier("status_bar_height", "dimen", "android")
+        val resourceID = context.resources.getIdentifier("status_bar_height", "dimen", "android")
 
         if (resourceID > 0)
             result = context.resources.getDimensionPixelOffset(resourceID)

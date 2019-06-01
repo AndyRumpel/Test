@@ -54,11 +54,9 @@ class FollowersFragment: MvpAppCompatFragment(), FollowersView {
         return mView
     }
 
-
     override fun showError(textResource: Int) {
         txtNoItems.text = getString(textResource)
     }
-
 
     override fun setupEmptyList() {
         followersRecycler.visibility = View.GONE

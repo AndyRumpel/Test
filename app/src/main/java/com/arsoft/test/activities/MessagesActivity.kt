@@ -29,6 +29,7 @@ class MessagesActivity : AppCompatActivity() {
     private lateinit var inputText: EditText
     private lateinit var backButton: ImageButton
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_messages)

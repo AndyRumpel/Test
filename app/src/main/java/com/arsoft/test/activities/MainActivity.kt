@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener {
     private val PERCENTAGE_TO_SHOW_TITLE_AT_TOOLBAR = 0.9f
     private val PERCENTAGE_TO_HIDE_TITLE_DETAILS = 0.3f
     private val ALPHA_ANIMATIONS_DURATION = 200
-    var imageUri = Uri.parse("https://pp.userapi.com/c849432/v849432958/10839a/wTLY0K_RHWQ.jpg")
+    private var imageUri = Uri.parse("https://pp.userapi.com/c849432/v849432958/10839a/wTLY0K_RHWQ.jpg")
 
     private var mIsTheTitleVisible = false
     private var mIsTheTitleContainerVisible = true

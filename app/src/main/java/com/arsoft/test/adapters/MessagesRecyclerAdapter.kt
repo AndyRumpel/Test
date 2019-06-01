@@ -46,9 +46,9 @@ class MessagesRecyclerAdapter(
 
     }
 
-    enum class MessageTypes(viewType: Int) {
-        MESSAGE_SEND_VIEW_TYPE(viewType = 0),
-        MESSAGE_RECEIVE_VIEW_TYPE(viewType = 1)
+    enum class MessageTypes {
+        MESSAGE_SEND_VIEW_TYPE,
+        MESSAGE_RECEIVE_VIEW_TYPE
     }
 
 }

@@ -1,5 +1,6 @@
 package com.arsoft.test.adapters
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -50,6 +51,7 @@ class DialogRecyclerAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         private val lastMessageTime = view.last_msg_time
         private val lastMessageText = view.last_message_text
 
+        @SuppressLint("SetTextI18n")
         fun bind(dialogModel: DialogModel) {
             Glide.with(itemView.context)
                 .load(dialogModel.avatar)
@@ -57,9 +59,6 @@ class DialogRecyclerAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             name_surname.text = "${dialogModel.name} ${dialogModel.surname}"
             lastMessageTime.text = dialogModel.messagesList?.last()?.messageTime
             lastMessageText.text = dialogModel.messagesList?.last()?.messageText
-
         }
-
     }
-
 }

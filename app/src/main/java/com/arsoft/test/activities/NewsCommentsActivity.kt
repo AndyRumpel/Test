@@ -48,7 +48,7 @@ class NewsCommentsActivity : MvpAppCompatActivity(), CommentsView {
     private lateinit var commentSendBtn: ImageButton
     private lateinit var scrollView: ScrollView
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "SimpleDateFormat")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news_comments)

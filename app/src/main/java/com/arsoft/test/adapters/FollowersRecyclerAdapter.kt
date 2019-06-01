@@ -18,7 +18,7 @@ class FollowersRecyclerAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() 
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FollowersViewHolder {
-        var v = LayoutInflater.from(parent.context).inflate(R.layout.followers_recycler_item, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.followers_recycler_item, parent, false)
         return FollowersViewHolder(v)
     }
 

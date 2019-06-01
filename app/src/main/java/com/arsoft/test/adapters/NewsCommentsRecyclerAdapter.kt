@@ -1,5 +1,6 @@
 package com.arsoft.test.adapters
 
+import android.annotation.SuppressLint
 import android.graphics.Color
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -33,6 +34,7 @@ class NewsCommentsRecyclerAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>
     }
 
     class NewsCommentsViewHolder(view: View): RecyclerView.ViewHolder(view) {
+        @SuppressLint("SetTextI18n")
         fun bind(commentModel: NewsCommentModel) {
             Glide.with(itemView.context)
                 .load(commentModel.avatar)

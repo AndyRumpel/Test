@@ -6,7 +6,7 @@ import com.arellomobile.mvp.viewstate.strategy.AddToEndSingleStrategy
 import com.arellomobile.mvp.viewstate.strategy.StateStrategyType
 import com.arsoft.test.models.NewsModel
 
-@StateStrategyType(value = AddToEndSingleStrategy::class)
+@StateStrategyType(AddToEndSingleStrategy::class)
 interface NewsView: MvpView {
     fun showError(textResource: Int)
     fun setupEmptyList()
