@@ -5,5 +5,4 @@ class FollowerModel(
     var surname: String,
     var avatar: String,
     var followersCount: Int
-) {
-}
+)

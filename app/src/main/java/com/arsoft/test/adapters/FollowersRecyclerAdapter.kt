@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import com.arsoft.test.R
 import com.arsoft.test.models.FollowerModel
 import com.bumptech.glide.Glide
-import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.followers_recycler_item.view.*
 
 

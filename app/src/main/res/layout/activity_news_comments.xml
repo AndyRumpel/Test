@@ -50,12 +50,12 @@
         <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
             <android.support.v7.widget.CardView
                     android:id="@+id/cardview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:elevation="8dp"
-            >
+                    android:elevation="8dp">
 
                 <LinearLayout
                         android:layout_width="match_parent"
@@ -93,14 +93,11 @@
                                     android:layout_height="wrap_content"
                                     android:text="Today, 12:25 a.m."
                                     android:textSize="12dp"
-                                    android:layout_gravity="right|center_vertical"
-                            />
+                                    android:layout_gravity="right|center_vertical"/>
 
                         </FrameLayout>
 
-
                     </LinearLayout>
-
 
                     <LinearLayout
                             android:layout_margin="16dp"
@@ -123,12 +120,12 @@
                             android:layout_height="0.25dp"
                             android:background="@color/colorPrimaryTransparent">
 
-
                     </View>
 
                     <android.support.constraint.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
+
                         <ImageView
                                 android:layout_width="48dp"
                                 android:layout_height="48dp"
@@ -139,8 +136,7 @@
                                 android:id="@+id/imageView"
                                 app:srcCompat="@drawable/ic_comment_24dp"
                                 android:paddingTop="14dp"
-                                android:paddingBottom="10dp"
-                        />
+                                android:paddingBottom="10dp"/>
 
                         <ImageButton
                                 android:id="@+id/post_like_button"
@@ -151,6 +147,7 @@
                                 android:background="?android:attr/selectableItemBackground"
                                 app:layout_constraintEnd_toStartOf="@+id/post_share_button"
                                 app:layout_constraintTop_toTopOf="parent"/>
+
                         <TextView
                                 android:id="@+id/post_likes_count"
                                 android:layout_width="wrap_content"
@@ -166,7 +163,6 @@
                                 app:layout_constraintTop_toTopOf="parent"
                                 app:layout_constraintHorizontal_bias="0.8"/>
 
-
                         <ImageButton
                                 android:id="@+id/post_share_button"
                                 android:layout_width="48dp"
@@ -177,6 +173,7 @@
                                 android:layout_gravity="right"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"/>
+
                         <TextView
                                 android:visibility="invisible"
                                 android:text="12"
@@ -189,23 +186,21 @@
                                 app:layout_constraintBottom_toBottomOf="@+id/imageView"
                                 app:layout_constraintTop_toTopOf="@+id/imageView"/>
 
-
                     </android.support.constraint.ConstraintLayout>
 
-
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
 
             <FrameLayout
                     android:layout_below="@id/cardview"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    >
+                    android:layout_height="match_parent">
+
                 <android.support.v7.widget.RecyclerView
                         android:id="@+id/comments_recycler"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                </android.support.v7.widget.RecyclerView>
+                        android:layout_height="wrap_content"/>
 
                 <TextView
                         android:id="@+id/comments_no_items"
@@ -222,20 +217,18 @@
                         app:cpv_indeterminate="true"
                         app:cpv_animAutostart="true"
                         app:cpv_color="@color/colorPrimary"/>
+
             </FrameLayout>
+
         </RelativeLayout>
 
-
     </ScrollView>
-
-
 
     <android.support.design.widget.CoordinatorLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:id="@+id/bottombar"
-            >
+            android:id="@+id/bottombar">
 
         <android.support.design.bottomappbar.BottomAppBar
                 android:layout_width="match_parent"
@@ -249,8 +242,7 @@
                     android:layout_height="48dp"
                     android:background="@android:color/white"
                     android:id="@+id/constraintLayout"
-                    android:layout_alignParentBottom="true"
-            >
+                    android:layout_alignParentBottom="true">
 
                 <ImageButton
                         android:id="@+id/comments_emoji_btn"
@@ -276,8 +268,8 @@
                         android:inputType="textCapSentences"
                         android:background="@android:color/transparent"
                         android:hint="Введите текст комментария..."
-
                         app:layout_constraintTop_toTopOf="parent"/>
+
                 <ImageButton
                         android:id="@+id/comments_send_btn"
                         android:layout_width="48dp"

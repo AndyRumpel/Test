@@ -2,7 +2,6 @@ package com.arsoft.test.models
 
 import android.os.Parcel
 import android.os.Parcelable
-import java.io.Serializable
 
 class MessageModel(
 

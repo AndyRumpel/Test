@@ -11,14 +11,9 @@ import com.facebook.drawee.view.SimpleDraweeView
 
 class ImageBehavior(val context: Context, attr: AttributeSet?): CoordinatorLayout.Behavior<SimpleDraweeView>(context, attr) {
 
-    private val MIN_AVATAR_PERCENTAGE_SIZE = 0.3F
-    private val EXTRA_FINAL_AVATAR_PADDING = 80
-
-    private val TAG = "behavior"
     private var mAvatarMaxSize = 0.0f
 
     private var mFinalLeftAvatarPadding = 0.0f
-    private var mStartPosition = 0.0f
     private var mStartXPosition = 0
     private var mStartToolbarPosition = 0.0f
 
@@ -55,8 +50,6 @@ class ImageBehavior(val context: Context, attr: AttributeSet?): CoordinatorLayou
         child.y = mStartYPosition - distanceYToSubtract
         child.x = mStartXPosition - distanceXToSubtract
 
-        val proportionalAvatarSize = (mAvatarMaxSize * expandedPercentageFactor)
-
         val lp = child.layoutParams as CoordinatorLayout.LayoutParams
         lp.width = (mStartHeight - heightToSubtract).toInt()
         lp.height = (mStartHeight - heightToSubtract).toInt()
@@ -67,7 +60,6 @@ class ImageBehavior(val context: Context, attr: AttributeSet?): CoordinatorLayou
 
     @SuppressLint("PrivateResource")
     private fun maybeInitProperties(child: SimpleDraweeView, dependency: View) {
-
         if (mStartYPosition == 0) mStartYPosition = dependency.y.toInt()
         if (mFinalYPosition == 0) mFinalYPosition = dependency.height / 2
         if (mStartHeight == 0) mStartHeight = child.height
@@ -75,10 +67,7 @@ class ImageBehavior(val context: Context, attr: AttributeSet?): CoordinatorLayou
         if (mStartXPosition == 0) mStartXPosition = child.x.toInt() + child.width / 2
         if (mFinalXPosition == 0 || mFinalXPosition == mStartXPosition) mFinalXPosition = context.resources.getDimensionPixelOffset(R.dimen.abc_action_bar_content_inset_material) + finalHeight / 2
         if (mStartToolbarPosition == 0.0f) mStartToolbarPosition = dependency.y + dependency.height / 2
-
     }
-
-
 
     private fun getStatusBarHeight(): Int {
         var result = 0

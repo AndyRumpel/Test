@@ -1,20 +1,18 @@
 package com.arsoft.test.activities
 
-import android.content.res.Configuration
-import android.net.Uri;
-import android.os.Bundle;
+import android.net.Uri
+import android.os.Bundle
 import android.support.design.widget.*
 import android.support.v4.view.ViewPager
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.View;
-import android.view.animation.AlphaAnimation;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import com.arsoft.test.helpers.ImageBehavior
+import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.Toolbar
+import android.view.Menu
+import android.view.View
+import android.view.animation.AlphaAnimation
+import android.widget.FrameLayout
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.TextView
 import com.arsoft.test.R
 import com.arsoft.test.adapters.TabsPagerFragmentAdapter
 import com.bumptech.glide.Glide
@@ -79,10 +77,7 @@ class MainActivity : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener {
         adapter = TabsPagerFragmentAdapter(supportFragmentManager)
         viewPager.adapter = adapter
         tablayout.setupWithViewPager(viewPager)
-
-
     }
-
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
@@ -136,5 +131,4 @@ class MainActivity : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener {
         alphaAnimation.fillAfter = true
         v.startAnimation(alphaAnimation)
     }
-
 }

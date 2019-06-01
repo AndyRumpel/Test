@@ -48,9 +48,6 @@ class NewsCommentsActivity : MvpAppCompatActivity(), CommentsView {
     private lateinit var commentSendBtn: ImageButton
     private lateinit var scrollView: ScrollView
 
-
-
-
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,7 +72,6 @@ class NewsCommentsActivity : MvpAppCompatActivity(), CommentsView {
         var isLiked = intent.getBooleanExtra("isLiked", false)
         var likesCount = intent.getIntExtra("likesCount", 0)
 
-
         Glide.with(this)
             .load(intent.getStringExtra("avatar"))
             .into(postAvatar)
@@ -84,15 +80,10 @@ class NewsCommentsActivity : MvpAppCompatActivity(), CommentsView {
         postMainText.text = intent.getStringExtra("mainText")
         postLikesCount.text = likesCount.toString()
 
-
-
-
         newsCommentsPresenter.loadComments()
         newsCommentsRecycler.layoutManager = LinearLayoutManager(this)
         newsCommentsAdapter = NewsCommentsRecyclerAdapter()
         newsCommentsRecycler.adapter = newsCommentsAdapter
-
-
 
         backButton.setOnClickListener {
             onBackPressed()

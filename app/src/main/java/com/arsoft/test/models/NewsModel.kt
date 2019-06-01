@@ -10,6 +10,4 @@ class NewsModel(
     var likesCount: Int,
     var isLiked: Boolean,
     var commentsCount: Int
-//    var commentsList: ArrayList<NewsCommentModel>
-) {
-}
+)

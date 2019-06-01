@@ -19,7 +19,6 @@ class NewsRecyclerAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var mNewsList = ArrayList<NewsModel>()
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
         var v = LayoutInflater.from(parent.context).inflate(R.layout.news_recycler_item, parent, false)
         return NewsViewHolder(v)
@@ -52,7 +51,6 @@ class NewsRecyclerAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         mNewsList.addAll(newsList)
     }
 
-
     class NewsViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         private val name_surname = view.news_name_surname
@@ -61,7 +59,6 @@ class NewsRecyclerAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         private val mainText = view.news_main_text
         private val likeButton = view.like_button
         private val likesCount = view.likes_count
-
 
         @SuppressLint("SetTextI18n")
         fun bind(newsModel: NewsModel) {

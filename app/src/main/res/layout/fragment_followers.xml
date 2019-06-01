@@ -10,9 +10,7 @@
             android:id="@+id/followers_recycler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp">
-
-    </android.support.v7.widget.RecyclerView>
+            android:layout_marginTop="4dp"/>
 
     <TextView
             android:id="@+id/followers_no_items"

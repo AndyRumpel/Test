@@ -39,7 +39,7 @@ class NewsCommentsProvider(var presenter: NewsCommentsPresenter) {
                     "Sadreev",
                     "https://pp.userapi.com/c627919/v627919459/1cd2c/f5MlNluwak0.jpg",
                     "15:13",
-                    "ВЗЛОМ ЖОПЫ",
+                    "Просто комментарий",
                     0,
                     false
                 )

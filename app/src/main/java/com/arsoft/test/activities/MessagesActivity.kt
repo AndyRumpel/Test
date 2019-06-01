@@ -8,7 +8,6 @@ import android.support.v7.widget.RecyclerView
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
-import com.arsoft.test.helpers.MessagesKeyBoardFix
 import com.arsoft.test.R
 import com.arsoft.test.adapters.MessagesRecyclerAdapter
 import com.arsoft.test.models.MessageModel
@@ -33,7 +32,6 @@ class MessagesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_messages)
-//        MessagesKeyBoardFix(this)
         nameSurnameTextView = findViewById(R.id.message_name_surname)
         avatarCiv = findViewById(R.id.message_avatar)
         sendButton = findViewById(R.id.msg_send_btn)
@@ -44,7 +42,6 @@ class MessagesActivity : AppCompatActivity() {
 
         nameSurnameTextView.text = "${intent.getStringExtra("name")} ${intent.getStringExtra( "surname")}"
         Glide.with(this).load(intent.getStringExtra("avatar")).into(avatarCiv)
-
 
         messagesList = intent.getParcelableArrayListExtra("messagesList")
         messagesRecycler.layoutManager = LinearLayoutManager(applicationContext)
@@ -63,7 +60,6 @@ class MessagesActivity : AppCompatActivity() {
         backButton.setOnClickListener {
             onBackPressed()
         }
-
     }
 
     @SuppressLint("SimpleDateFormat")
