@@ -5,9 +5,9 @@ import android.os.Parcelable
 
 class MessageModel(
 
-    val messageText: String,
-    val messageTime: String,
-    val isSend: Boolean
+    var messageText: String,
+    var messageTime: String,
+    var isSend: Boolean
 
 ): Parcelable {
     constructor(parcel: Parcel) : this(
