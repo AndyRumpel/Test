@@ -4,13 +4,13 @@ import android.os.Parcel
 import android.os.Parcelable
 
 class NewsCommentModel(
-    val name: String,
-    val surname: String,
-    val avatar: String,
-    val commentTime: String,
-    val commentText: String,
-    val likesCount: Int,
-    val isLiked: Boolean
+    var name: String,
+    var surname: String,
+    var avatar: String,
+    var commentTime: String,
+    var commentText: String,
+    var likesCount: Int,
+    var isLiked: Boolean
 ): Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
