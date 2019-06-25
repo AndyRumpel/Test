@@ -1,8 +1,8 @@
 package com.arsoft.test.models
 
 class FollowerModel(
-    val name: String,
-    val surname: String,
-    val avatar: String,
-    val followersCount: Int
+    var name: String,
+    var surname: String,
+    var avatar: String,
+    var followersCount: Int
 )
