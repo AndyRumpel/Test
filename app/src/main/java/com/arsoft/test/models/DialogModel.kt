@@ -1,8 +1,8 @@
 package com.arsoft.test.models
 
 class DialogModel(
-    val name: String,
-    val surname: String,
-    val avatar: String,
-    val messagesList: ArrayList<MessageModel>?
+    var name: String,
+    var surname: String,
+    var avatar: String,
+    var messagesList: ArrayList<MessageModel>?
 )
