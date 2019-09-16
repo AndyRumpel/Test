@@ -30,11 +30,10 @@ class NewsFragment: MvpAppCompatFragment(), NewsView{
     private lateinit var txtNoItems: TextView
 
     companion object {
-        var args = Bundle()
-        var fragment = NewsFragment()
         fun getInstance(): NewsFragment {
-            fragment.arguments = args
-            return fragment
+            return NewsFragment().apply {
+                this.arguments = Bundle()
+            }
         }
     }
 
@@ -54,6 +53,7 @@ class NewsFragment: MvpAppCompatFragment(), NewsView{
         return mView
     }
 
+    // View implementation
 
     override fun showError(textResource: Int) {
         txtNoItems.text = getString(textResource)

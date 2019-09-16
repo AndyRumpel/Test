@@ -131,6 +131,7 @@ class NewsCommentsActivity : MvpAppCompatActivity(), CommentsView {
     }
 
 
+    // View implementation
 
     override fun showError(textResource: Int) {
         txtNoItems.text = getString(textResource)

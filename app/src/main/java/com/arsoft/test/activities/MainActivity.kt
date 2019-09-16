@@ -76,6 +76,7 @@ class MainActivity : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener {
 
         adapter = TabsPagerFragmentAdapter(supportFragmentManager)
         viewPager.adapter = adapter
+        viewPager.offscreenPageLimit = 3
         tablayout.setupWithViewPager(viewPager)
     }
 

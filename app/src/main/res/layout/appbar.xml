@@ -13,12 +13,11 @@
             android:layout_height="match_parent">
 
         <android.support.v7.widget.Toolbar
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 app:popupTheme="@style/AppTheme.PopupOverlay"
-                android:gravity="center"
-                android:layout_marginStart="8dp">
+                android:gravity="center">
 
             <ImageButton
                     android:id="@+id/messages_back_btn"
@@ -30,7 +29,8 @@
             <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/message_avatar"
                     android:layout_width="48dp"
-                    android:layout_height="48dp"/>
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="8dp"/>
 
             <TextView
                     android:id="@+id/message_name_surname"
@@ -38,8 +38,7 @@
                     android:layout_height="wrap_content"
                     android:text="Andy Rumpel"
                     android:textSize="16dp"
-                    android:textColor="@android:color/white"
-                    android:layout_marginStart="8dp"/>
+                    android:textColor="@android:color/white"/>
 
         </android.support.v7.widget.Toolbar>
 

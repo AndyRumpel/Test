@@ -12,7 +12,6 @@ import com.facebook.drawee.view.SimpleDraweeView
 class ImageBehavior(val context: Context, attr: AttributeSet?): CoordinatorLayout.Behavior<SimpleDraweeView>(context, attr) {
 
     private var mAvatarMaxSize = 0.0f
-
     private var mFinalLeftAvatarPadding = 0.0f
     private var mStartXPosition = 0
     private var mStartToolbarPosition = 0.0f

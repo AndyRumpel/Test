@@ -29,11 +29,10 @@ class DialogFragment: MvpAppCompatFragment(), DialogsView {
     private lateinit var txtNoItems: TextView
 
     companion object{
-        var args = Bundle()
-        var fragment = DialogFragment()
         fun getInstance(): DialogFragment {
-            fragment.arguments = args
-            return fragment
+            return DialogFragment().apply {
+                this.arguments = Bundle()
+            }
         }
     }
 
@@ -51,6 +50,8 @@ class DialogFragment: MvpAppCompatFragment(), DialogsView {
         dialogRecycler.adapter = dialogAdapter
         return mView
     }
+
+    // View implementation
 
     override fun showError(textResource: Int) {
         txtNoItems.text = getString(textResource)

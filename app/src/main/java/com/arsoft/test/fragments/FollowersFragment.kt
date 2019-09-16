@@ -30,11 +30,10 @@ class FollowersFragment: MvpAppCompatFragment(), FollowersView {
     private lateinit var txtNoItems: TextView
 
     companion object {
-        var args = Bundle()
-        var fragment = FollowersFragment()
         fun getInstance(): FollowersFragment {
-            fragment.arguments = args
-            return fragment
+            return FollowersFragment().apply {
+                this.arguments = Bundle()
+            }
         }
     }
 
@@ -53,6 +52,8 @@ class FollowersFragment: MvpAppCompatFragment(), FollowersView {
         followersRecycler.adapter = followersAdapter
         return mView
     }
+
+    // View implementation
 
     override fun showError(textResource: Int) {
         txtNoItems.text = getString(textResource)
